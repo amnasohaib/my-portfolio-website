@@ -4,17 +4,12 @@ import ProjectImg03 from "@/public/portfolio.png";
 
 import { Orbitron } from "next/font/google";
 
-import { Anta } from "next/font/google";
-
-const anta = Anta({ weight: "400", subsets: ["latin"] });
-
 import MarqueeSlider from "react-marquee-slider";
-import { Spacer } from "@nextui-org/react";
 
 import React from 'react';
 import ImageDisplay from "@/components/ImageDisplay";
 
-const orbitron = Orbitron({ weight: "500", subsets: ["latin"] });
+const orbitron = Orbitron({ weight: "400", subsets: ["latin"] });
 
 const projects = [
   {
@@ -42,10 +37,10 @@ const Projects = () => {
   return (
     <>
     <div id="projects" className={`${orbitron.className} text-4xl`}>
-      <MarqueeSlider velocity={30} direction="ltr">
+      <MarqueeSlider velocity={15} direction="ltr">
       {Array.from({ length: loopLength }).map((_, index) => (
         <React.Fragment key={index}>
-          <div> PROJECTS </div>
+          <div className="tracking-wider"> PROJECTS </div>
         </React.Fragment>
       ))}
       </MarqueeSlider>
