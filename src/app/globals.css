@@ -59,7 +59,7 @@ img {
 
 @media (min-width: 500px) {
   h2 {
-    /* top: 70%; */
+    top: 50%;
     left: calc(50% + 170px)
   }
 

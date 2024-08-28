@@ -27,7 +27,6 @@ module.exports = {
         fadeIn: 'fadeIn 1s ease-in-out forwards',
       },
       colors: {
-        // background: '#dc3e26',
         background: '#451b64',
         white: '#fff'
       },

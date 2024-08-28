@@ -1,26 +1,20 @@
-import { useRef } from "react";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform
-} from "framer-motion";
-
 import ProjectImg01 from "@/public/conversationalist.png";
 import ProjectImg02 from "@/public/fahm-school.png";
 import ProjectImg03 from "@/public/portfolio.png";
-import Image  from "next/image";
 
 import { Orbitron } from "next/font/google";
+
+import { Anta } from "next/font/google";
+
+const anta = Anta({ weight: "400", subsets: ["latin"] });
 
 import MarqueeSlider from "react-marquee-slider";
 import { Spacer } from "@nextui-org/react";
 
-const orbitron = Orbitron({ weight: "500", subsets: ["latin"] });
+import React from 'react';
+import ImageDisplay from "@/components/ImageDisplay";
 
-function useParallax(value, distance) {
-  return useTransform(value, [0, 1], [-distance, distance]);
-}
+const orbitron = Orbitron({ weight: "500", subsets: ["latin"] });
 
 const projects = [
   {
@@ -41,46 +35,19 @@ const projects = [
 ];
 
 
-function ImageDisplay({ project }) {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 300);
-
-  return (
-    <>
-    <motion.div whileTap={{ rotate: -3 }}>
-    <section class="project-section">
-      <div ref={ref} className="rounded-lg shadow-lg">
-      <Image
-          src={project.img}
-          alt={project.name}
-        />
-      </div>
-      <motion.h2 style={{ y }}>#{project.id}</motion.h2>
-    </section>
-    </motion.div>
-    </>
-  );
-}
-
-
 const Projects = () => {
+
+  const loopLength = 10;
+
   return (
     <>
     <div id="projects" className={`${orbitron.className} text-4xl`}>
       <MarqueeSlider velocity={30} direction="ltr">
-        <div> PROJECTS </div>
-        <Spacer x={10} />
-        <div> PROJECTS </div>
-        <Spacer x={10} />
-        <div> PROJECTS </div>
-        <Spacer x={10} />
-        <div> PROJECTS </div>
-        <Spacer x={10} />
-        <div> PROJECTS </div>
-        <Spacer x={10} />
-        <div> PROJECTS </div>
-        <Spacer x={10} />
+      {Array.from({ length: loopLength }).map((_, index) => (
+        <React.Fragment key={index}>
+          <div> PROJECTS </div>
+        </React.Fragment>
+      ))}
       </MarqueeSlider>
     </div>
 

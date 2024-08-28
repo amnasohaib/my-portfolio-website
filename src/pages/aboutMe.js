@@ -1,15 +1,8 @@
-
 import { Card } from "@nextui-org/react";
 
 import { Anta } from "next/font/google";
 
-import { motion } from 'framer-motion';
-
 const anta = Anta({weight: '400', subsets: ["latin"] })
-
-import { Orbitron } from "next/font/google";
-
-const orbitron = Orbitron({ weight: "500", subsets: ["latin"] });
 
 const AboutMe = () => {
 

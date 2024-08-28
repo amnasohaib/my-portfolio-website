@@ -1,47 +1,37 @@
-// Dropdown.js
+import {
+    Dropdown,
+    DropdownTrigger,
+    DropdownMenu,
+    DropdownItem,
+  } from "@nextui-org/dropdown";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
+  import { Button } from "@nextui-org/react";
 
-const Dropdown = ({ item }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const menuItems = item?.children || [];
+import { FaBars } from "react-icons/fa6";
 
-  const toggle = () => {
-    setIsOpen((prev) => !prev);
-  };
+import Link from "next/link";
 
-  const transClass = isOpen ? 'flex' : 'hidden';
+const DropdownNav = () => {
+    return(
+<Dropdown>
+        <DropdownTrigger className="fixed right-0 m-1">
+          <Button className="bg-background bg-opacity-50 text-white rounded-full">
+            <FaBars />
+          </Button>
+        </DropdownTrigger>
+        <DropdownMenu className="text-center">
+          <DropdownItem>
+            <Link href="#about">About Me</Link>
+          </DropdownItem>
+          <DropdownItem>
+            <Link href="#projects">Projects</Link>
+          </DropdownItem>
+          <DropdownItem>
+            <Link href="#contact">Contact Me</Link>
+          </DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    )
+}
 
-  return (
-    <>
-      <div className="relative">
-        <button className="hover:text-blue-400" onClick={toggle}>
-          {item.title}
-        </button>
-        <div
-          className={`absolute top-8 z-30 w-[250px] min-h-[300px] flex flex-col py-4 bg-zinc-400 rounded-md ${transClass}`}
-        >
-          {menuItems.map((menuItem) => (
-            <Link
-              key={menuItem.route}
-              className="hover:bg-zinc-300 hover:text-zinc-500 px-4 py-1"
-              href={menuItem.route || ''}
-              onClick={toggle}
-            >
-              {menuItem.title}
-            </Link>
-          ))}
-        </div>
-      </div>
-      {isOpen && (
-        <div
-          className="fixed top-0 right-0 bottom-0 left-0 z-20 bg-black/40"
-          onClick={toggle}
-        ></div>
-      )}
-    </>
-  );
-};
-
-export default Dropdown;
+export default DropdownNav;

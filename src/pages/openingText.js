@@ -1,4 +1,4 @@
-import MainText from "./MainText";
+import MainText from "../components/MainText";
 
 const OpeningText = () => {
     return(
