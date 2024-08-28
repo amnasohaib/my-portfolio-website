@@ -2,32 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: var(--background);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: start;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h2 {
+  margin: 0;
+  color: var(--accent);
+  left: calc(50% + 170px);
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.2;
+  position: absolute;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+section {
+  scroll-snap-align: end
 }
+
+.project-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  perspective: 500px;
+}
+
+.project-section > div {
+  width: 400px;
+  height: 500px;
+  position: relative;
+  max-height: 90vh;
+  margin: 20px;
+  background: var(--white);
+  overflow: hidden;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
