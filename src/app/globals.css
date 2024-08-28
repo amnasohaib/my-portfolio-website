@@ -16,7 +16,7 @@ html {
 h2 {
   margin: 0;
   color: var(--accent);
-  left: calc(50% + 170px);
+  top: 80%;
   font-size: 56px;
   font-weight: 700;
   letter-spacing: -3px;
@@ -38,8 +38,8 @@ section {
 }
 
 .project-section > div {
-  width: 400px;
-  height: 500px;
+  width: 300px;
+  height: 400px;
   position: relative;
   max-height: 90vh;
   margin: 20px;
@@ -57,3 +57,15 @@ img {
   height: 100%;
 }
 
+@media (min-width: 500px) {
+  h2 {
+    top: 50%;
+    left: calc(50% + 170px)
+  }
+
+  .project-section > div {
+    width: 400px;
+    height: 500px;
+  }
+  
+}

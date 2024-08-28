@@ -69,8 +69,8 @@ function ImageDisplay({ project }) {
 const Projects = () => {
   return (
     <>
-    <div className={`${orbitron.className} text-4xl`}>
-      <MarqueeSlider id="projects" velocity={30} direction="ltr">
+    <div id="projects" className={`${orbitron.className} text-4xl`}>
+      <MarqueeSlider velocity={30} direction="ltr">
         <div> PROJECTS </div>
         <Spacer x={10} />
         <div> PROJECTS </div>

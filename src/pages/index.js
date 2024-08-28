@@ -12,7 +12,7 @@ export default function Home() {
 
       <OpeningText />
 
-      <div id="about">
+      <div id="about" className="m-0">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ export default function Home() {
         transition={{ duration: 1 }}
       >
         <div className="relative flex justify-center mt-20 mb-60">
-          <div className="w-1/2 max-w-md">
+          <div className="w-4/5 max-w-md">
             <AboutMe />
           </div>
         </div>
