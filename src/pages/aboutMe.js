@@ -17,7 +17,6 @@ const AboutMe = () => {
     <section
   >
       <Card className="p-5 md:p-10">
-      <h1 className={`text-lg text-center mb-3 ${orbitron.className}`}>Something about me</h1>
       <p className={`text-sm text-justify mb-3 ${anta.className}`}>
         a final-year computer science student exploring the vastness of frontend
         and making visually appealing websites! My journey started with a simple

@@ -9,13 +9,13 @@ import Icon from "@/components/icon";
 
 const ContactMe = () => {
   return (
-    <div id="contact" className={`justify-center bg-background bg-opacity-50 text-center pt-4 `}>
+    <div id="contact" className={`justify-center bg-background bg-opacity-50 text-center pt-40 `}>
       <section>
         <h1 className={`${anta.className} text-4xl text-white`}>
           contact me
         </h1>
         <Spacer y={10} />
-        <div className="flex justify-center space-x-4 pb-10">
+        <div className="flex justify-center space-x-4 pb-40">
           <Link
           href="mailto:amnasohaib2003@gmail.com"
           className="text-white text-2xl"

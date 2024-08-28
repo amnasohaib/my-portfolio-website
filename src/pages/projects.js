@@ -48,14 +48,12 @@ function ImageDisplay({ project }) {
 
   return (
     <>
-    <motion.div whileHover={{ rotate: -3 }}>
+    <motion.div whileTap={{ rotate: -3 }}>
     <section class="project-section">
       <div ref={ref} className="rounded-lg shadow-lg">
       <Image
           src={project.img}
           alt={project.name}
-          width={500}
-      height={500}
         />
       </div>
       <motion.h2 style={{ y }}>#{project.id}</motion.h2>
