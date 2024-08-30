@@ -1,6 +1,6 @@
-import ProjectImg01 from "@/public/conversationalist.png";
-import ProjectImg02 from "@/public/fahm-school.png";
-import ProjectImg03 from "@/public/portfolio.png";
+import ProjectImg01 from "../../public/conversationalist.png";
+import ProjectImg02 from "../../public/fahm-school.png";
+import ProjectImg03 from "../../public/portfolio.png";
 
 import { Orbitron } from "next/font/google";
 
