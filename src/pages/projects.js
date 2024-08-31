@@ -1,6 +1,7 @@
 import ProjectImg01 from "../../public/conversationalist.png";
 import ProjectImg02 from "../../public/fahm-school.png";
 import ProjectImg03 from "../../public/portfolio.png";
+import ProjectImg04 from "../../public/portfolio-project.png";
 
 import { Orbitron } from "next/font/google";
 
@@ -25,6 +26,11 @@ const projects = [
   {
     id: '003',
     img: ProjectImg03,
+    name: "Portfolio Website",
+  },
+  {
+    id: '004',
+    img: ProjectImg04,
     name: "Portfolio Website",
   },
 ];
