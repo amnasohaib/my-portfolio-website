@@ -10,10 +10,7 @@ import Icon from "@/components/icon";
 
 const ContactMe = () => {
   return (
-    <div
-      
-      className={`justify-center bg-background bg-opacity-50 text-center pt-40 `}
-    >
+    <div className={`justify-center bg-background text-center pt-40 `}>
       <section id="contact">
         <h1 className={`${anta.className} text-4xl text-white`}>contact me</h1>
         <Spacer y={10} />
@@ -41,19 +38,19 @@ const ContactMe = () => {
         </div>
 
         <Spacer y={10} />
-        <div  className="pb-40">
-        <motion.div 
-        whileHover={{ rotate: -5 , cursor: "pointer" }}
-        whileTap={{ rotate: -10 }}
-        >
-          <motion.a
-            href="/myCV.pdf"
-            download="Amna Sohaib's CV"
-            className={`${anta.className} text-lg bg-white text-background p-3 text-opacity-50 rounded-full`}
+        <div className="pb-40">
+          <motion.div
+            whileHover={{ rotate: -5, cursor: "pointer" }}
+            whileTap={{ rotate: -10 }}
           >
-            Download My CV
-          </motion.a>
-        </motion.div>
+            <motion.a
+              href="/myCV.pdf"
+              download="Amna Sohaib's CV"
+              className={`${anta.className} text-lg bg-white text-background p-3 text-opacity-50 rounded-full`}
+            >
+              Download My CV
+            </motion.a>
+          </motion.div>
         </div>
       </section>
     </div>

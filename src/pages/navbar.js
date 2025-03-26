@@ -1,5 +1,3 @@
-
-
 import DropdownNav from "@/components/Dropdown";
 import { Anta } from "next/font/google";
 
@@ -10,9 +8,8 @@ import React from "react";
 const NavBar = () => {
   return (
     <div className="flex justify-between w-full pr-2 mb-5">
-    
-    <DropdownNav />
-    
+      <DropdownNav />
+
       <h1 className={`flex align-center ${anta.className} mt-2 text-lg`}>
         Amna&apos;s Website
       </h1>

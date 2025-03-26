@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const {nextui} = require("@nextui-org/react");
+const { nextui } = require("@nextui-org/react");
 
 module.exports = {
   content: [
@@ -8,27 +8,28 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@glidejs/glide/src/assets/sass/glide.core"
+    "./node_modules/@glidejs/glide/src/assets/sass/glide.core",
   ],
   theme: {
     extend: {
       keyframes: {
         marquee: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(-100%)' },
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
         },
         fadeIn: {
-          '0%': { opacity: 0 },
-          '100%': { opacity: 1 },
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
         },
       },
       animation: {
-        marquee: 'marquee 10s linear infinite',
-        fadeIn: 'fadeIn 1s ease-in-out forwards',
+        marquee: "marquee 10s linear infinite",
+        fadeIn: "fadeIn 1s ease-in-out forwards",
       },
       colors: {
-        background: '#451b64',
-        white: '#fff'
+        background: "#8e9b90",
+        darkerBackground: "#002626",
+        secondary: "#C6878F",
       },
     },
   },

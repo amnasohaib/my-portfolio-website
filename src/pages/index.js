@@ -14,7 +14,7 @@ export default function Home() {
       <OpeningText />
 
       <WaveEffect />
-      
+
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
