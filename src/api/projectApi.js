@@ -60,7 +60,7 @@ export const useVercelProjects = () => {
                 previewImageUrl: getScreenshot(project.alias[0]?.domain),
                 description,
                 technologies,
-                githubLink: `https://github.com/${project.link.repo}`,
+                githubLink: `https://github.com/${githubUser}/${project.link.repo}`,
                 liveLink: `https://${project.alias[0]?.domain}` || "",
               };
             } catch (err) {
