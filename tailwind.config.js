@@ -31,6 +31,10 @@ module.exports = {
         darkerBackground: "#002626",
         secondary: "#C6878F",
       },
+      fontFamily: {
+        aesthetic: ["Aesthetic Regular"],
+        "wasted-vindey": ["Wasted Vindey"],
+      },
     },
   },
   plugins: [nextui()],

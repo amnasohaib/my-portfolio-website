@@ -7,13 +7,23 @@
   width: 0px;
 }
 
+@font-face {
+  font-family: "Aesthetic Regular";
+  src: url("../fonts/Aesthetic-Regular-d026.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Wasted Vindey";
+  src: url("../fonts/Wasted-Vindey.ttf") format("truetype");
+}
+
 html {
   scroll-snap-type: y mandatory;
   scroll-snap-align: start;
 }
 
 body {
-  cursor: url('../../public/arrowhead.png'), auto;
+  cursor: url("../../public/arrowhead.png"), auto;
 }
 
 h2 {
@@ -28,7 +38,7 @@ h2 {
 }
 
 section {
-  scroll-snap-align: end
+  scroll-snap-align: end;
 }
 
 .project-section {
@@ -63,12 +73,11 @@ img {
 @media (min-width: 500px) {
   h2 {
     top: 50%;
-    left: calc(50% + 170px)
+    left: calc(50% + 170px);
   }
 
   .project-section > div {
     width: 400px;
     height: 500px;
   }
-  
 }

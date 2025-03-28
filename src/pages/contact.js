@@ -1,9 +1,11 @@
 import { Link, Spacer } from "@nextui-org/react";
-import { Anta } from "next/font/google";
 
 import { motion } from "framer-motion";
 
-const anta = Anta({ weight: "400", subsets: ["latin"] });
+import { Cormorant_Garamond } from "next/font/google";
+
+const cormorant = Cormorant_Garamond({ weight: "500", subsets: ["latin"] });
+
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
 import Icon from "@/components/icon";
@@ -12,7 +14,9 @@ const ContactMe = () => {
   return (
     <div className={`justify-center bg-background text-center pt-40 `}>
       <section id="contact">
-        <h1 className={`${anta.className} text-4xl text-white`}>contact me</h1>
+        <h1 className={`${cormorant.className} text-4xl text-white`}>
+          contact info
+        </h1>
         <Spacer y={10} />
         <div className="flex justify-center space-x-4">
           <Link
@@ -46,7 +50,7 @@ const ContactMe = () => {
             <motion.a
               href="/myCV.pdf"
               download="Amna Sohaib's CV"
-              className={`${anta.className} text-lg bg-white text-background p-3 text-opacity-50 rounded-full`}
+              className={` text-sm bg-white text-background p-3 rounded-full`}
             >
               Download My CV
             </motion.a>

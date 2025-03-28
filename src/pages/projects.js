@@ -23,7 +23,7 @@ const ProjectCard = ({ project }) => {
       {/* Project Image */}
       <div className="p-6 space-y-4">
         {project.previewImageUrl && (
-          <div className="relative w-full my-4 h-64 overflow-hidden rounded-t-lg">
+          <div className="relative w-full my-4 md:h-64 overflow-hidden rounded-t-lg">
             <Image
               src={project.previewImageUrl}
               alt={`${project.name} preview`}
