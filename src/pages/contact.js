@@ -12,7 +12,7 @@ import Icon from "@/components/icon";
 
 const ContactMe = () => {
   return (
-    <div className={`justify-center bg-background text-center pt-40 `}>
+    <div className={`justify-center bg-background text-center pt-40`}>
       <section id="contact">
         <h1 className={`${cormorant.className} text-4xl text-white`}>
           contact info

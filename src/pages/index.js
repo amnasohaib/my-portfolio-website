@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import ContactMe from "./contact";
 import OpeningText from "./openingText";
 import WaveEffect from "@/components/WaveEffect";
+import ExperienceSection from "./experiences";
 
 export default function Home() {
   return (
@@ -26,6 +27,8 @@ export default function Home() {
           </div>
         </div>
       </motion.div>
+
+      <ExperienceSection />
 
       <Projects />
 

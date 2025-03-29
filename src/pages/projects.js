@@ -102,7 +102,7 @@ const Projects = () => {
 
   return (
     <div id="projects" className="mb-10 md:mb-20">
-      <div className="text-center my-10 md:my-20 text-5xl md:text-7xl font-bold">
+      <div className="text-center mt-20 my-10 uppercase text-5xl md:text-7xl text-darkerBackground font-aesthetic">
         Projects
       </div>
       {projects.length > 0 ? (
