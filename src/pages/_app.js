@@ -1,3 +1,4 @@
+import CustomCursor from "@/components/CustomCursor";
 import "../app/globals.css";
 
 export const metadata = {
@@ -6,5 +7,10 @@ export const metadata = {
 };
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <CustomCursor />
+      <Component {...pageProps} />;
+    </>
+  );
 }

@@ -7,7 +7,6 @@ import { useVercelProjects } from "@/api/projectApi";
 const ProjectCard = ({ project }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  console.log({ project });
   return (
     <motion.div
       className="relative group overflow-hidden rounded-2xl bg-background shadow-2xl"

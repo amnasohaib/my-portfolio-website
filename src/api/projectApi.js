@@ -2,8 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const getScreenshot = (url) => {
-  console.log({ url });
-  return `https://api.apiflash.com/v1/urltoimage?access_key=2e25ea061ee94e7dbe56c46414bbdb95&url=https://${url}&format=jpeg&width=1200&height=630`;
+  return `https://api.apiflash.com/v1/urltoimage?access_key=2e25ea061ee94e7dbe56c46414bbdb95&url=https://${url}&width=1200&height=630`;
 };
 
 export const useVercelProjects = () => {
@@ -27,8 +26,6 @@ export const useVercelProjects = () => {
           }
         );
 
-        console.log({ projectsResponse });
-
         const projectsWithDetails = await Promise.all(
           projectsResponse.data.projects.map(async (project) => {
             try {
@@ -42,7 +39,6 @@ export const useVercelProjects = () => {
                   `https://api.github.com/repos/${githubUser}/${repoName}`,
                   { headers: { Authorization: `Bearer ${githubToken}` } }
                 );
-                console.log({ githubResponse });
                 description = githubResponse.data.description || description;
 
                 const projectLanguages = await axios.get(
