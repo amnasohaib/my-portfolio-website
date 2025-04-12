@@ -42,21 +42,21 @@ const ExperienceCard = ({ experience, index }) => {
       <div
         className={`relative md:h-[20em] flex items-center ${
           isEven ? "lg:ml-12 text-left" : "lg:mr-12 "
-        } bg-white/10 backdrop-blur-md p-6 rounded-lg border border-pink-100/20 shadow-xl`}
+        } bg-white/90 p-6 rounded-xl border border-pink-100/20 shadow-xl`}
       >
         <div className="flex flex-col gap-1">
           <h3 className="text-xl md:text-2xl font-bold text-darkerBackground/50">
             {experience.position}
           </h3>
           <div className="flex items-center gap-2 mb-2">
-            <span className="md:text-lg text-gray-200 font-medium">
+            <span className="md:text-lg text-background font-medium">
               {experience.company}
             </span>
             <span className="text-xs md:text-sm text-darkerBackground/60 px-3 py-0.5 rounded-full border border-darkerBackground/40">
               {experience.duration}
             </span>
           </div>
-          <p className="text-gray-200 text-sm md:text-[16px] leading-relaxed">
+          <p className="text-background text-justify text-sm md:text-[16px] leading-relaxed">
             {experience.description}
           </p>
         </div>
@@ -77,6 +77,7 @@ const ExperienceSection = () => {
 
   return (
     <section
+      id="experience"
       ref={sectionRef}
       className="min-h-screen w-full bg-background px-4 relative overflow-hidden"
     >

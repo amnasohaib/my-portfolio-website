@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-scrollbar {
-  height: 0px;
-  width: 0px;
-}
-
 @font-face {
   font-family: "Aesthetic Regular";
   src: url("../fonts/Aesthetic-Regular-d026.woff2") format("woff2");
@@ -37,34 +32,9 @@ section {
   scroll-snap-align: end;
 }
 
-.project-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  perspective: 500px;
-}
-
-.project-section > div {
-  width: 300px;
-  height: 400px;
-  position: relative;
-  max-height: 90vh;
-  margin: 20px;
-  background: var(--white);
-  overflow: hidden;
-}
-
-
 @media (min-width: 500px) {
   h2 {
     top: 50%;
     left: calc(50% + 170px);
-  }
-
-  .project-section > div {
-    width: 400px;
-    height: 500px;
   }
 }

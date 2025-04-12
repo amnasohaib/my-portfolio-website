@@ -9,7 +9,7 @@ import ExperienceSection from "./experiences";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <NavBar />
 
       <OpeningText />
@@ -33,6 +33,6 @@ export default function Home() {
       <Projects />
 
       <ContactMe />
-    </div>
+    </>
   );
 }

@@ -24,6 +24,9 @@ const DropdownNav = () => {
           <Link href="#about">About Me</Link>
         </DropdownItem>
         <DropdownItem>
+          <Link href="#experience">Experience</Link>
+        </DropdownItem>
+        <DropdownItem>
           <Link href="#projects">Projects</Link>
         </DropdownItem>
         <DropdownItem>
