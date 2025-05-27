@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const getScreenshot = (url) => {
-  return `https://api.apiflash.com/v1/urltoimage?access_key=2e25ea061ee94e7dbe56c46414bbdb95&url=https://${url}&width=1200&height=630`;
+  return `https://api.screenshotone.com/take?url=https://${url}&access_key=${process.env.NEXT_PUBLIC_SCREENSHOT_API_KEY}`;
 };
 
 export const useVercelProjects = () => {
