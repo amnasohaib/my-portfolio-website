@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Image } from "@nextui-org/react";
 import { Globe, Loader2 } from "lucide-react";
-import { useVercelProjects } from "@/api/projectApi";
+import { useVercelProjects } from "@/app/api/projectApi";
 
 const ProjectCard = ({ project }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -77,7 +77,7 @@ const ProjectCard = ({ project }) => {
 
         {/* Technologies */}
         <div className="flex flex-wrap gap-2">
-          {project.technologies.map((tech, index) => (
+          {project.technologies?.map((tech, index) => (
             <span
               key={index}
               className="bg-darkerBackground bg-opacity-50 text-white px-2 py-1 rounded-full text-xs"
@@ -93,6 +93,8 @@ const ProjectCard = ({ project }) => {
 
 const Projects = () => {
   const { projects, error } = useVercelProjects();
+
+  console.log("Projects data:", projects);
 
   if (error) {
     return (
