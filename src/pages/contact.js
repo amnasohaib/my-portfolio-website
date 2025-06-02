@@ -12,7 +12,7 @@ import Icon from "@/components/icon";
 
 const ContactMe = () => {
   return (
-    <div className={`justify-center bg-background text-center py-40`}>
+    <div className={`justify-center bg-background text-center py-40 !m-0`}>
       <section id="contact">
         <h1 className="font-aesthetic uppercase text-4xl md:text-6xl text-white">
           contact info

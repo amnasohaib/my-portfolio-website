@@ -45,6 +45,7 @@ const ProjectCard = ({ project }) => {
                 whileHover={{ scale: 1.2, rotate: 360 }}
                 transition={{ duration: 0.3 }}
                 className="text-white"
+                title="View on GitHub"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +66,7 @@ const ProjectCard = ({ project }) => {
                 whileHover={{ scale: 1.2 }}
                 transition={{ duration: 0.3 }}
                 className="text-white"
+                title="View Live Site"
               >
                 <Globe />
               </motion.a>
@@ -75,17 +77,22 @@ const ProjectCard = ({ project }) => {
         {/* Description */}
         <p className="text-white text-sm">{project.description}</p>
 
-        {/* Technologies */}
-        <div className="flex flex-wrap gap-2">
-          {project.technologies?.map((tech, index) => (
-            <span
-              key={index}
-              className="bg-darkerBackground bg-opacity-50 text-white px-2 py-1 rounded-full text-xs"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
+        {/* Technologies/Languages */}
+        {project.technologies && project.technologies.length > 0 && (
+          <div>
+            <h4 className="text-white font-medium mb-2">Languages:</h4>
+            <div className="flex flex-wrap gap-2">
+              {project.technologies.map((tech, index) => (
+                <span
+                  key={index}
+                  className="bg-darkerBackground bg-opacity-50 text-white px-2 py-1 rounded-full text-xs"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </motion.div>
   );
