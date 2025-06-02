@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const getScreenshot = (url) => {
-  return `https://api.screenshotone.com/take?url=https://${url}&access_key=${process.env.NEXT_PUBLIC_SCREENSHOT_API_KEY}`;
+  return `https://api.screenshotone.com/take?url=https://${url}&access_key=${process.env.SCREENSHOT_API_KEY}`;
 };
 
 export const useVercelProjects = () => {
