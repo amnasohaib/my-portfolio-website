@@ -1,3 +1,5 @@
+"use client";
+
 import Projects from "./projects";
 import NavBar from "./navbar";
 import AboutMe from "./aboutMe";
@@ -11,9 +13,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-
       <OpeningText />
-
       <WaveEffect />
 
       <motion.div
@@ -29,9 +29,7 @@ export default function Home() {
       </motion.div>
 
       <ExperienceSection />
-
       <Projects />
-
       <ContactMe />
     </>
   );

@@ -1,3 +1,5 @@
+"use client";
+
 import MainText from "../components/MainText";
 
 const OpeningText = () => {

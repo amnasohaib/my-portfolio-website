@@ -1,6 +1,12 @@
+"use client";
+
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { experiences } from "@/config/experiencesConfig";
+
+import { Cormorant_Garamond } from "next/font/google";
+
+const cormorant = Cormorant_Garamond({ weight: "500", subsets: ["latin"] });
 
 const ExperienceCard = ({ experience, index }) => {
   const cardRef = useRef(null);
@@ -45,18 +51,18 @@ const ExperienceCard = ({ experience, index }) => {
         } bg-white/90 p-6 rounded-xl border border-pink-100/20 shadow-xl`}
       >
         <div className="flex flex-col gap-1">
-          <h3 className="text-xl md:text-2xl font-bold text-darkerBackground/50">
+          <h3 className="text-xl md:text-2xl font-wasted-vindey text-darkerBackground/70">
             {experience.position}
           </h3>
-          <div className="flex items-center gap-2 mb-2">
-            <span className="md:text-lg text-background font-medium">
+          <div className={`${cormorant.className} flex items-center gap-2 mb-2`}>
+            <span className="md:text-lg text-darkerBackground/50 font-medium">
               {experience.company}
             </span>
-            <span className="text-xs md:text-sm text-darkerBackground/60 px-3 py-0.5 rounded-full border border-darkerBackground/40">
+            <span className="text-xs md:text-sm text-darkerBackground/70 px-3 py-0.5 rounded-full border border-darkerBackground/40">
               {experience.duration}
             </span>
           </div>
-          <p className="text-background text-justify text-sm md:text-[16px] leading-relaxed">
+          <p className="text-background text-justify text-[13px] md:text-[16px] leading-relaxed">
             {experience.description}
           </p>
         </div>

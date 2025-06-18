@@ -1,5 +1,6 @@
-import { Card } from "@nextui-org/react";
+"use client";
 
+import { Card } from "@nextui-org/react";
 import { Cormorant_Garamond } from "next/font/google";
 
 const cormorant = Cormorant_Garamond({ weight: "500", subsets: ["latin"] });
@@ -8,14 +9,14 @@ const AboutMe = () => {
   return (
     <section>
       <Card className="p-5 md:p-7">
-        <p className={`text-md text-justify mb-3 ${cormorant.className}`}>
+        <p className={`text-md md:text-lg text-justify mb-3 ${cormorant.className}`}>
           a final-year computer science student exploring the vastness of
           frontend and making visually appealing websites! My journey started
           with a simple curiosity about how websites work, and now it has turned
           into a full-on passion for creating smooth, interactive user
           experiences.
         </p>
-        <p className={`text-md text-justify ${cormorant.className}`}>
+        <p className={`text-md md:text-lg text-justify ${cormorant.className}`}>
           I love turning ideas into aesthetic, responsive websites that just
           feel right to use. Whether it is tweaking the tiniest detail or making
           sure everything works seamlessly across devices, I&apos;m all about

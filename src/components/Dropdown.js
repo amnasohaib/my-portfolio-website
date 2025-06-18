@@ -4,12 +4,12 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "@nextui-org/dropdown";
-
 import { Button } from "@nextui-org/react";
-
 import { FaBars } from "react-icons/fa6";
-
 import Link from "next/link";
+import { Cormorant_Garamond } from "next/font/google";
+
+const cormorant = Cormorant_Garamond({ weight: "500", subsets: ["latin"] });
 
 const DropdownNav = () => {
   return (
@@ -19,7 +19,7 @@ const DropdownNav = () => {
           <FaBars />
         </Button>
       </DropdownTrigger>
-      <DropdownMenu className="text-center">
+      <DropdownMenu className={`${cormorant.className} text-center`}>
         <DropdownItem>
           <Link href="#about">About Me</Link>
         </DropdownItem>

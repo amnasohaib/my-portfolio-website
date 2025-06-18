@@ -1,3 +1,5 @@
+"use client";
+
 import DropdownNav from "@/components/Dropdown";
 import React from "react";
 

@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <CustomCursor />
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }
