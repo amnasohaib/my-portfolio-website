@@ -11,8 +11,16 @@ export const experiences = [
     id: 2,
     position: "Software Developer Intern",
     company: "Teresol Pvt Ltd",
-    duration: "May 2022 - Dec 2022",
+    duration: "June 2024 - Aug 2024",
     description:
       "During my time at the company, I built up my skills by learning Vue.js through a project I started on my own. I also used XState to handle the app's state management, which made everything work more smoothly. For the backend, I set up an Express Server and connected it to MongoDB to store all the data. This project helped me learn how to build complete applications from front to back while picking up new technologies along the way.",
+  },
+  {
+    id: 3,
+    position: "Freelance Projects",
+    company: "",
+    duration: "May 2025 - Present",
+    description:
+      "I've worked with multiple companies to create custom websites according to their needs. These projects showcase my ability to deliver solutions across various industries, emphasizing modern design, user experience, and clean, maintainable code.",
   },
 ];

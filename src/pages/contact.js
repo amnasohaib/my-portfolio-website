@@ -12,7 +12,7 @@ const ContactMe = () => {
   return (
     <section
       id="contact"
-      className="justify-center bg-background text-center py-40 !m-0"
+      className="justify-center bg-background text-center py-40 overflow-hidden"
     >
       <h1 className="font-aesthetic uppercase text-4xl md:text-6xl text-white">
         contact info
@@ -48,7 +48,7 @@ const ContactMe = () => {
           whileTap={{ rotate: -10 }}
         >
           <motion.a
-            href="/myCV.pdf"
+            href="/AmnasCV.pdf"
             download="Amna Sohaib's CV"
             className={`${cormorant.className} text-md md:text-lg bg-white text-background p-3 rounded-full`}
           >

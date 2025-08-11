@@ -2,12 +2,13 @@
 
 import Projects from "./projects";
 import NavBar from "./navbar";
-import AboutMe from "./aboutMe";
+import AboutMe from "./about";
 import { motion } from "framer-motion";
 import ContactMe from "./contact";
 import OpeningText from "./openingText";
 import WaveEffect from "@/components/WaveEffect";
 import ExperienceSection from "./experiences";
+import TechStack from "@/components/TechStack";
 
 export default function Home() {
   return (
@@ -21,13 +22,12 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="relative flex justify-center mt-20 mb-60">
-          <div className="w-4/5 max-w-md">
-            <AboutMe />
-          </div>
+        <div className="relative w-full flex justify-center mt-20 mb-20">
+          <AboutMe />
         </div>
       </motion.div>
 
+      <TechStack />
       <ExperienceSection />
       <Projects />
       <ContactMe />
