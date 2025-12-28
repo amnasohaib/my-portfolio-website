@@ -34,8 +34,8 @@ const AboutMe = () => {
       <p
         className={`bg-white/50 rounded-lg absolute max-w-lg left-0 text-start mb-6`}
       >
-        a computer science graduate exploring the vastness of frontend and
-        making visually appealing websites! My journey started with a simple
+        a computer science graduate exploring the vastness of frontend, design
+        and making visually appealing websites! My journey started with a simple
         curiosity about how websites work, and now it has turned into a full-on
         passion for creating smooth, interactive user experiences.
       </p>
@@ -43,10 +43,11 @@ const AboutMe = () => {
       <p
         className={`bg-white/50 rounded-lg absolute max-w-lg right-0 bottom-0 text-end`}
       >
-        I love turning ideas into aesthetic, responsive websites that just feel
-        right to use. Whether it is tweaking the tiniest detail or making sure
-        everything works seamlessly across devices, I&apos;m all about the user
-        experience and making myself a better coder by each line of code!
+        I love turning ideas into aesthetic, responsive designs and websites
+        that just feel right to use. Whether it is tweaking the tiniest detail
+        or making sure everything works seamlessly across devices, I&apos;m all
+        about the user experience and making myself a better coder by each line
+        of code!
       </p>
     </div>
   );

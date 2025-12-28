@@ -1,5 +1,13 @@
 export const experiences = [
   {
+    id: 4,
+    position: "Software Design Engineer",
+    company: "Teresol Pvt Ltd",
+    duration: "September 2025 - Present",
+    description:
+      "In my role, I focus on creating user-friendly and visually appealing designs for web and mobile applications. I collaborate closely with developers to ensure that the designs meet user needs and business goals. My responsibilities include wireframing, prototyping to enhance the overall user experience.",
+  },
+  {
     id: 1,
     position: "Frontend Developer Intern",
     company: "Mudirr",
