@@ -4,7 +4,7 @@ import Icon from "@/components/Icon";
 import { Link, Spacer } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { Cormorant_Garamond } from "next/font/google";
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaBehanceSquare } from "react-icons/fa";
 
 const cormorant = Cormorant_Garamond({ weight: "500", subsets: ["latin"] });
 
@@ -38,6 +38,14 @@ const ContactMe = () => {
           className="text-white text-2xl"
         >
           <Icon icon={<FaGithub />} />
+        </Link>
+
+        <Link
+          href="https://www.behance.net/amnasohaib2"
+          className="text-white text-2xl"
+        >
+          <Icon icon={<FaBehanceSquare />} />
+        
         </Link>
       </div>
 

@@ -29,6 +29,10 @@ h2 {
   position: absolute;
 }
 
+*, *::before, *::after {
+  cursor: none !important;
+}
+
 @media (min-width: 500px) {
   h2 {
     top: 50%;

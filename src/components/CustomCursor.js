@@ -7,50 +7,43 @@ const CustomCursor = () => {
   const [borderColor, setBorderColor] = useState("#8e9b90");
 
   useEffect(() => {
-    document.body.style.cursor = "none";
+  const updateCursorPosition = (e) => {
+    setCursorPosition({ x: e.clientX, y: e.clientY });
 
-    const updateCursorPosition = (e) => {
-      setCursorPosition({ x: e.clientX, y: e.clientY });
+    let element = document.elementFromPoint(e.clientX, e.clientY);
+    let bgColor = "rgba(0, 0, 0, 0)";
 
-      let element = document.elementFromPoint(e.clientX, e.clientY);
-      let bgColor = "rgba(0, 0, 0, 0)"; 
-      
-      while (element && bgColor === "rgba(0, 0, 0, 0)") {
-        bgColor = window.getComputedStyle(element).backgroundColor;
-        element = element.parentElement; 
-      }
+    while (element && bgColor === "rgba(0, 0, 0, 0)") {
+      bgColor = window.getComputedStyle(element).backgroundColor;
+      element = element.parentElement;
+    }
 
-      if (bgColor === "rgb(142, 155, 144)") {
-        setCursorColor("#ffffff");
-        setBorderColor("#8e9b90");
-      } else {
-        setCursorColor("#8e9b90");
-        setBorderColor("#ffffff")
-      }
-    };
+    if (bgColor === "rgb(142, 155, 144)") {
+      setCursorColor("#ffffff");
+      setBorderColor("#8e9b90");
+    } else {
+      setCursorColor("#8e9b90");
+      setBorderColor("#ffffff");
+    }
+  };
 
-    const handleHover = () => setIsHovering(true);
-    const handleLeave = () => setIsHovering(false);
+  const handleHover = (e) => {
+    if (e.target.closest("a, button, [role='button'], [onClick]")) {
+      setIsHovering(true);
+    }
+  };
+  const handleLeave = () => setIsHovering(false);
 
-    window.addEventListener("mousemove", updateCursorPosition);
+  window.addEventListener("mousemove", updateCursorPosition);
+  window.addEventListener("mouseover", handleHover);
+  window.addEventListener("mouseout", handleLeave);
 
-    const linksAndButtons = document.querySelectorAll("a, button");
-    linksAndButtons.forEach((element) => {
-      element.addEventListener("mouseenter", handleHover);
-      element.addEventListener("mouseleave", handleLeave);
-      element.style.cursor = "none";
-    });
-
-    return () => {
-      window.removeEventListener("mousemove", updateCursorPosition);
-
-      linksAndButtons.forEach((element) => {
-        element.removeEventListener("mouseenter", handleHover);
-        element.removeEventListener("mouseleave", handleLeave);
-        element.style.cursor = "auto";
-      });
-    };
-  }, []);
+  return () => {
+    window.removeEventListener("mousemove", updateCursorPosition);
+    window.removeEventListener("mouseover", handleHover);
+    window.removeEventListener("mouseout", handleLeave);
+  };
+}, []);
 
   return (
     <div
